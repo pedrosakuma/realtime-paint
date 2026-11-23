@@ -88,6 +88,9 @@ Run the deterministic connection and workload tests with:
 dotnet test .\tests\RealtimePaint.Tests.csproj -c Release
 ```
 
+For a fixed warm-up and repeated, uninstrumented comparison workload, see
+[`BENCHMARK.md`](BENCHMARK.md).
+
 ## Viability questions (not answered yet)
 
 - Can the MCP produce useful, interpretable evidence under representative drawing traffic?
