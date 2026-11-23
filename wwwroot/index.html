@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quadro compartilhado</title>
+  <link rel="stylesheet" href="/style.css?v=3">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Quadro compartilhado</h1>
+      <span id="status" class="status" role="status" aria-live="polite">Conectando…</span>
+    </header>
+    <section class="workspace" aria-label="Área de desenho">
+      <div class="toolbar" role="toolbar" aria-label="Cores do lápis">
+        <span>Lápis</span>
+        <button class="swatch selected" data-color="1" aria-label="Preto" aria-pressed="true" title="Preto"></button>
+        <button class="swatch" data-color="2" aria-label="Vermelho" aria-pressed="false" title="Vermelho"></button>
+        <button class="swatch" data-color="3" aria-label="Verde" aria-pressed="false" title="Verde"></button>
+        <button class="swatch" data-color="4" aria-label="Azul" aria-pressed="false" title="Azul"></button>
+        <button class="swatch" data-color="5" aria-label="Amarelo" aria-pressed="false" title="Amarelo"></button>
+      </div>
+      <canvas id="board" width="256" height="256" aria-label="Desenhe no quadro compartilhado"></canvas>
+      <p class="hint">Escolha uma cor e desenhe. Quem está conectado recebe os mesmos traços.</p>
+      <p class="hint persistence">Quem entrar vê o quadro atual. O desenho fica na memória enquanto o servidor estiver ativo.</p>
+    </section>
+  </main>
+  <script src="/app.js?v=3"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>RealtimePaint</AssemblyName>
+    <RootNamespace>SocialPresence.RealtimePaint</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="load\**\*.cs" />
+    <Compile Remove="tests\**\*.cs" />
+  </ItemGroup>
+
+</Project>
