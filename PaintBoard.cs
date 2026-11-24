@@ -88,7 +88,7 @@ public sealed class PaintBoard
                     request.Color,
                     request.Points,
                     Stopwatch.GetTimestamp()),
-                JsonOptions);
+                PaintJsonContext.Default.StrokeEvent);
 
             for (int index = clients.Count - 1; index >= 0; index--)
             {
