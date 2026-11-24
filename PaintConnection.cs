@@ -25,9 +25,10 @@ public static class PaintConnection
 
         try
         {
+            byte[] buffer = new byte[4_096];
             while (socket.State == WebSocketState.Open)
             {
-                byte[]? payload = await ReceiveMessageAsync(socket, cancellationToken);
+                byte[]? payload = await ReceiveMessageAsync(socket, buffer, cancellationToken);
                 if (payload is null)
                 {
                     break;
@@ -110,9 +111,9 @@ public static class PaintConnection
 
     private static async Task<byte[]?> ReceiveMessageAsync(
         WebSocket socket,
+        byte[] buffer,
         CancellationToken cancellationToken)
     {
-        byte[] buffer = new byte[4_096];
         using var message = new MemoryStream();
 
         while (true)
